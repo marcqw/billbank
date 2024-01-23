@@ -1,0 +1,19 @@
+meta {
+  name: Update a customer
+  type: http
+  seq: 4
+}
+
+put {
+  url: https://api.sheety.co/64c3d1d28ec1e2d2861f4303f9cfa355/camunbankia/customers/2
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "customer": {
+      "comment": "yoooooo"
+    }
+  } 
+}
