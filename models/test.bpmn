@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1vkmqr9" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.19.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.4.0">
+  <bpmn:process id="Onboarding" isExecutable="true">
+    <bpmn:extensionElements>
+      <zeebe:userTaskForm id="UserTaskForm_08msomd">{
+  "components": [
+    {
+      "text": "### Ouverture de compte bancaire",
+      "type": "text",
+      "id": "Heading_0",
+      "layout": {
+        "row": "row_0",
+        "columns": null
+      }
+    },
+    {
+      "text": "##### Informations personnelles",
+      "type": "text",
+      "id": "Subheading_1",
+      "layout": {
+        "row": "row_1",
+        "columns": null
+      }
+    },
+    {
+      "type": "textfield",
+      "id": "Textfield_2",
+      "label": "Nom complet",
+      "validate": {
+        "minLength": 2,
+        "maxLength": 50,
+        "required": true
+      },
+      "key": "fullName",
+      "description": "Veuillez entrer votre nom complet",
+      "layout": {
+        "row": "row_2",
+        "columns": null
+      }
+    },
+    {
+      "type": "textfield",
+      "id": "Textfield_3",
+      "label": "Adresse",
+      "validate": {
+        "minLength": 5,
+        "maxLength": 100,
+        "required": true
+      },
+      "key": "address",
+      "description": "Veuillez entrer votre adresse",
+      "layout": {
+        "row": "row_2",
+        "columns": null
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date de naissance",
+      "type": "datetime",
+      "id": "Date_4",
+      "validate": {
+        "required": true
+      },
+      "key": "dateOfBirth",
+      "description": "Veuillez entrer votre date de naissance",
+      "layout": {
+        "row": "row_2",
+        "columns": null
+      }
+    },
+    {
+      "label": "Adresse Email",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1cfcoht",
+        "columns": null
+      },
+      "id": "Field_1wr9ev6",
+      "key": "email_address"
+    },
+    {
+      "text": "##### Revenus et informations fiscales",
+      "type": "text",
+      "id": "Subheading_5",
+      "layout": {
+        "row": "row_3",
+        "columns": null
+      }
+    },
+    {
+      "type": "number",
+      "id": "Number_6",
+      "label": "Revenu annuel",
+      "decimalDigits": 2,
+      "defaultValue": 0,
+      "validate": {
+        "min": 10000,
+        "max": 1000000,
+        "step": 1000,
+        "required": true
+      },
+      "key": "annualIncome",
+      "description": "Veuillez entrer votre revenu annuel",
+      "layout": {
+        "row": "row_4",
+        "columns": null
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "France",
+          "value": "france"
+        },
+        {
+          "label": "Luxembourg",
+          "value": "luxembourg"
+        },
+        {
+          "label": "USA",
+          "value": "usa"
+        },
+        {
+          "label": "Corée du Nord",
+          "value": "coreeDuNord"
+        }
+      ],
+      "label": "Résidence fiscale",
+      "type": "select",
+      "layout": {
+        "row": "row_4",
+        "columns": null
+      },
+      "id": "Field_0qeso73",
+      "key": "select_we7o9r",
+      "defaultValue": "&lt;none&gt;"
+    },
+    {
+      "text": "##### Situations à risques",
+      "type": "text",
+      "id": "Subheading_8",
+      "layout": {
+        "row": "row_5",
+        "columns": null
+      }
+    },
+    {
+      "type": "checkbox",
+      "id": "Checkbox_9",
+      "label": "US Person",
+      "defaultValue": false,
+      "validate": {
+        "required": true
+      },
+      "key": "usPerson",
+      "description": "Êtes-vous une personne américaine ?",
+      "layout": {
+        "row": "row_6",
+        "columns": null
+      }
+    },
+    {
+      "type": "checkbox",
+      "id": "Checkbox_10",
+      "label": "Personne ayant une fonction dans un gouvernement",
+      "defaultValue": false,
+      "validate": {
+        "required": true
+      },
+      "key": "governmentFunction",
+      "description": "Êtes-vous une personne ayant une fonction dans un gouvernement ?",
+      "layout": {
+        "row": "row_6",
+        "columns": null
+      }
+    },
+    {
+      "type": "checkbox",
+      "id": "Checkbox_11",
+      "label": "Sous tutelle",
+      "defaultValue": false,
+      "validate": {
+        "required": true
+      },
+      "key": "underGuardianship",
+      "description": "Êtes-vous sous tutelle ?",
+      "layout": {
+        "row": "row_6",
+        "columns": null
+      }
+    }
+  ],
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.4.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.19.0"
+  },
+  "schemaVersion": 14,
+  "id": "Form_1iix1pz",
+  "generated": true,
+  "type": "default"
+}</zeebe:userTaskForm>
+    </bpmn:extensionElements>
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_0yg52u0</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_0yg52u0" sourceRef="StartEvent_1" targetRef="Activity_1y2l9ni" />
+    <bpmn:endEvent id="Event_0r351ps">
+      <bpmn:incoming>Flow_0s440em</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0btkk2o" sourceRef="Activity_1y2l9ni" targetRef="Activity_0cv607c" />
+    <bpmn:userTask id="Activity_1y2l9ni">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:UserTaskForm_08msomd" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0yg52u0</bpmn:incoming>
+      <bpmn:outgoing>Flow_0btkk2o</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Activity_0cv607c" name="Générer le contrat en PDF">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="create-pdf-contract" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0btkk2o</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ya00l8</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_1ya00l8" sourceRef="Activity_0cv607c" targetRef="Event_1oev1ed" />
+    <bpmn:intermediateCatchEvent id="Event_1oev1ed" zeebe:modelerTemplate="io.camunda.connectors.webhook.WebhookConnectorIntermediate.v1" zeebe:modelerTemplateVersion="4" zeebe:modelerTemplateIcon="data:image/svg+xml,%3Csvg id=&#39;icon&#39; xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;18&#39; height=&#39;18&#39; viewBox=&#39;0 0 32 32&#39;%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d=&#39;M24,26a3,3,0,1,0-2.8164-4H13v1a5,5,0,1,1-5-5V16a7,7,0,1,0,6.9287,8h6.2549A2.9914,2.9914,0,0,0,24,26Z&#39;/%3E%3Cpath d=&#39;M24,16a7.024,7.024,0,0,0-2.57.4873l-3.1656-5.5395a3.0469,3.0469,0,1,0-1.7326.9985l4.1189,7.2085.8686-.4976a5.0006,5.0006,0,1,1-1.851,6.8418L17.937,26.501A7.0005,7.0005,0,1,0,24,16Z&#39;/%3E%3Cpath d=&#39;M8.532,20.0537a3.03,3.03,0,1,0,1.7326.9985C11.74,18.47,13.86,14.7607,13.89,14.708l.4976-.8682-.8677-.497a5,5,0,1,1,6.812-1.8438l1.7315,1.002a7.0008,7.0008,0,1,0-10.3462,2.0356c-.457.7427-1.1021,1.8716-2.0737,3.5728Z&#39;/%3E%3Crect id=&#39;_Transparent_Rectangle_&#39; data-name=&#39;&#38;lt;Transparent Rectangle&#38;gt;&#39; class=&#39;cls-1&#39; width=&#39;32&#39; height=&#39;32&#39;/%3E%3C/svg%3E">
+      <bpmn:extensionElements>
+        <zeebe:properties>
+          <zeebe:property name="inbound.type" value="io.camunda:webhook:1" />
+          <zeebe:property name="inbound.subtype" value="ConfigurableInboundWebhook" />
+          <zeebe:property name="inbound.method" value="post" />
+          <zeebe:property name="inbound.context" value="contractSigningSuccess" />
+          <zeebe:property name="inbound.shouldValidateHmac" value="disabled" />
+          <zeebe:property name="inbound.auth.type" value="NONE" />
+          <zeebe:property name="correlationKeyExpression" value="=request.body.data.envelopeId" />
+        </zeebe:properties>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1ya00l8</bpmn:incoming>
+      <bpmn:outgoing>Flow_0s440em</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_03xkh3f" messageRef="Message_00gt5hh" />
+    </bpmn:intermediateCatchEvent>
+    <bpmn:sequenceFlow id="Flow_0s440em" sourceRef="Event_1oev1ed" targetRef="Event_0r351ps" />
+  </bpmn:process>
+  <bpmn:message id="Message_00gt5hh" name="8812ab73-a6c1-4e7f-9d52-83469ef0953d" zeebe:modelerTemplate="io.camunda.connectors.webhook.WebhookConnectorIntermediate.v1">
+    <bpmn:extensionElements>
+      <zeebe:subscription correlationKey="=envelopeId" />
+    </bpmn:extensionElements>
+  </bpmn:message>
+  <bpmn:message id="Message_2iipmfi" name="Message_2iipmfi">
+    <bpmn:extensionElements>
+      <zeebe:subscription correlationKey="=dd" />
+    </bpmn:extensionElements>
+  </bpmn:message>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Onboarding">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1gsh21k_di" bpmnElement="Activity_1y2l9ni">
+        <dc:Bounds x="370" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_15k7mbb_di" bpmnElement="Activity_0cv607c">
+        <dc:Bounds x="510" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0r351ps_di" bpmnElement="Event_0r351ps">
+        <dc:Bounds x="1032" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_01ngzq3_di" bpmnElement="Event_1oev1ed">
+        <dc:Bounds x="682" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0yg52u0_di" bpmnElement="Flow_0yg52u0">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="370" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0btkk2o_di" bpmnElement="Flow_0btkk2o">
+        <di:waypoint x="470" y="117" />
+        <di:waypoint x="510" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ya00l8_di" bpmnElement="Flow_1ya00l8">
+        <di:waypoint x="610" y="117" />
+        <di:waypoint x="682" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0s440em_di" bpmnElement="Flow_0s440em">
+        <di:waypoint x="718" y="117" />
+        <di:waypoint x="1032" y="117" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

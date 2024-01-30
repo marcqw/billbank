@@ -1,0 +1,34 @@
+{
+  "name": "camunda-billbank",
+  "version": "0.0.1",
+  "description": "The world's best (fake) bank",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "nodemon src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcqw/camunda-billbank.git"
+  },
+  "keywords": [
+    "camunda"
+  ],
+  "author": "William Marcq @marcqw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcqw/camunda-billbank/issues"
+  },
+  "homepage": "https://github.com/marcqw/camunda-billbank#readme",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "moment": "^2.30.1",
+    "pdfkit": "^0.14.0",
+    "zeebe-node": "^8.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
