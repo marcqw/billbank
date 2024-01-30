@@ -1,0 +1,15 @@
+meta {
+  name: authr
+  type: http
+  seq: 5
+}
+
+post {
+  url: https://account-d.docusign.com/oauth/token
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Basic BASE64_COMBINATION_OF_INTEGRATION_AND_SECRET_KEYS
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Auth
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://account-d.docusign.com/oauth/token
+  body: formUrlEncoded
+  auth: none
+}
+
+headers {
+  Content-Type: application/x-www-form-urlencoded
+}
+
+body:form-urlencoded {
+  grant_type: authorization_code
+  code: VOTRE_CODE_D_AUTORISATION
+  redirect_uri: VOTRE_URL_DE_REDIRECTION
+  client_id: VOTRE_CLE_INTEGRATION
+  client_secret: VOTRE_CLE_SECRETE
+}
